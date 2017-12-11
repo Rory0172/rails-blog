@@ -2,6 +2,8 @@
 
 <div><%= @post.body %> </div>
 
-<%= link_to "edit Post", edit_post_path(@post) %>
+<%= button_to "edit Post", edit_post_path(@post), method: :get,
+ class: 'btn btn-primary' %>
 
-<%= link_to "Delete Post", post_path(@post), method: :delete, data: {confirm: "Are you sure?"} %>
+
+<%= link_to "Delete Post", post_path(@post), method: :delete, class: "btn btn-danger", data: {confirm: "Are you sure?"} %>
